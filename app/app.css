@@ -1,0 +1,17 @@
+
+
+TextField {
+    color: #448954;
+    font-size: 20;
+}
+
+Button {
+   font-size: 12;
+   color: white;
+   background-color: #448954;
+}
+
+ActionBar {
+    background-color:  #448954;
+    color: white;
+}

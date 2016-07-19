@@ -1,0 +1,17 @@
+<page xmlns:x="nativescript-statusbar">
+    
+    <x:StatusBar ios:barStyle="light" android:barStyle="#387446" />
+    
+    <ActionBar title="Kribnet Login">
+      <android>
+        <NavigationButton icon="res://slide_menu"  tap="showSlideout" />
+      </android>
+    </ActionBar>
+    
+    <StackLayout class="login">
+        <Image src="res://login"  stretch="none" horizontalAlignment="center" class="logo"></Image>
+        <TextField hint="Email Address" autocorrect="false" autocapitalizationType="none"/>
+        <TextField hint="Password" secure="true"/>
+        <Button text="Sign In" class="sign-in"></Button>
+    </StackLayout>
+</page> 
