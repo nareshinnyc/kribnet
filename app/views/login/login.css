@@ -1,14 +1,14 @@
-.login{
-    margin-top:10%;
+.login-page .login{
     margin-left:10%;
     margin-right:10%;
+    border-width: 1;
+    border-color:#e2e2e2;
+    height:200;
+    padding:5;
+    background-color: #f2f2f2;
 }
 
-.login .sign-in {
+.login-page .sign-in {
     margin-top:50;
 }
 
-
-.login .logo {
-    margin-bottom:70
-}

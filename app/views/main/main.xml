@@ -1,0 +1,37 @@
+<page xmlns:x="nativescript-statusbar" class="main-page" loaded="mainPageLoaded">
+    
+    <x:StatusBar ios:barStyle="light" android:barStyle="#387446" />
+    
+    <ActionBar title="Kribnet">
+      <android>
+        <NavigationButton icon="res://slide_menu"  tap="showSlideout" />
+      </android>
+    </ActionBar>
+    
+
+    <TabView id="tabView">
+       <TabView.items>
+         <TabViewItem title="News Bits" xmlns:newsBits="views/news-bits">
+           <TabViewItem.view >
+              <newsBits:news />
+           </TabViewItem.view>
+         </TabViewItem>
+         <TabViewItem title="Bulletin Board">
+           <TabViewItem.view>
+              <Label text="Bulletin Board" />
+           </TabViewItem.view>
+         </TabViewItem>
+        <TabViewItem title="Events">
+           <TabViewItem.view>
+              <Label text="Events" />
+           </TabViewItem.view>
+        </TabViewItem>
+        <TabViewItem title="Chirps">
+           <TabViewItem.view>
+              <Label text="Chirps" />
+           </TabViewItem.view>
+         </TabViewItem>   
+       </TabView.items>
+     </TabView>    
+   
+</page> 

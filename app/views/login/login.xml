@@ -1,4 +1,4 @@
-<page xmlns:x="nativescript-statusbar">
+<page xmlns:x="nativescript-statusbar" class="login-page">
     
     <x:StatusBar ios:barStyle="light" android:barStyle="#387446" />
     
@@ -9,9 +9,8 @@
     </ActionBar>
     
     <StackLayout class="login">
-        <Image src="res://login"  stretch="none" horizontalAlignment="center" class="logo"></Image>
         <TextField hint="Email Address" autocorrect="false" autocapitalizationType="none"/>
         <TextField hint="Password" secure="true"/>
-        <Button text="Sign In" class="sign-in"></Button>
+        <Button text="Sign In" class="sign-in" tap = "onLogin"></Button>
     </StackLayout>
 </page> 

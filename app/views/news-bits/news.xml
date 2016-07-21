@@ -1,2 +1,7 @@
-<page xmlns:x="nativescript-statusbar">
-</page>
+<ListView items="{{ newsItems }}" loaded="newsPageLoaded" class="news-bits-page">
+        <ListView.itemTemplate>
+            <StackLayout class="list">
+            <Label text="{{ title }}" textWrap="true" class="title" />
+            </StackLayout>
+        </ListView.itemTemplate>
+</ListView>
