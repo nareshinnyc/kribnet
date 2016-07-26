@@ -1,6 +1,36 @@
+.news-bits-page {
+    background-color:#eee;
+}
 .news-bits-page .list {
-    padding:15;
+    padding:10;
+    height:100;
+    background-color:#fff;
+    border-width:1;
+    border-color:#ddd;
+    
 }
 .news-bits-page .title{
     font-size: 15;
+}
+
+.news-bits-page image{
+    margin-right:2%;
+    width:20%;
+}
+
+.news-bits-page .title{
+    width:77%;
+}
+
+.news-bits-page .heading{
+    font-size: 20;
+    text-align: center;
+    padding-top:10;
+    padding-bottom:10;
+    
+}
+
+.pullRefresh{
+    width:100%;
+    height:100%;
 }

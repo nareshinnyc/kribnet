@@ -1,7 +1,55 @@
-<ListView items="{{ newsItems }}" loaded="newsPageLoaded" class="news-bits-page">
-        <ListView.itemTemplate>
-            <StackLayout class="list">
-            <Label text="{{ title }}" textWrap="true" class="title" />
+<StackLayout xmlns:PullRefresh="nativescript-pulltorefresh" class="news-bits-page" loaded="newsPageLoaded">
+    <PullRefresh:PullToRefresh refresh="refreshNews" id="pullRefresh" class=".pullRefresh">
+        <ScrollView >
+            <StackLayout>
+                <Label text="Top Stories" textWrap="true" class="heading"/>
+                <Repeater items="{{ topStories }}">
+                    <Repeater.itemTemplate>
+                        <StackLayout class="list">
+                            <WrapLayout>
+                                <Image src="{{  enclosure.link }}"  />
+                                <Label text="{{ title }}" textWrap="true" class="title" />
+                            </WrapLayout>
+                        </StackLayout>
+                    </Repeater.itemTemplate>
+                </Repeater>
+
+                <Label text="Technology" textWrap="true" class="heading"/>
+                <Repeater items="{{ technology }}">
+                    <Repeater.itemTemplate>
+                        <StackLayout class="list">
+                            <WrapLayout>
+                                <Image src="{{  enclosure.link }}"  />
+                                <Label text="{{ title }}" textWrap="true" class="title" />
+                            </WrapLayout>
+                        </StackLayout>
+                    </Repeater.itemTemplate>
+                </Repeater>
+
+                <Label text="Science" textWrap="true" class="heading"/>
+                <Repeater items="{{ science }}">
+                    <Repeater.itemTemplate>
+                        <StackLayout class="list">
+                            <WrapLayout>
+                                <Image src="{{  enclosure.link }}"  />
+                                <Label text="{{ title }}" textWrap="true" class="title" />
+                            </WrapLayout>
+                        </StackLayout>
+                    </Repeater.itemTemplate>
+                </Repeater>
+
+                <Label text="Sports" textWrap="true" class="heading"/>
+                <Repeater items="{{ sports }}">
+                    <Repeater.itemTemplate>
+                        <StackLayout class="list">
+                            <WrapLayout>
+                                <Image src="{{  enclosure.link }}"  />
+                                <Label text="{{ title }}" textWrap="true" class="title" />
+                            </WrapLayout>
+                        </StackLayout>
+                    </Repeater.itemTemplate>
+                </Repeater>
             </StackLayout>
-        </ListView.itemTemplate>
-</ListView>
+        </ScrollView>
+     </PullRefresh:PullToRefresh>
+</StackLayout>

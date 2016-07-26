@@ -1,11 +1,16 @@
 var http = require("http");
 
-var URL = "http://rss2json.com/api.json?rss_url=https%3A%2F%2Fnews.google.com%2Fnews%3Fcf%3Dall%26hl%3Den%26pz%3D1%26ned%3Dus%26output%3Drss";
+var URLS = {
+    "topStories":"http://rss2json.com/api.json?rss_url=http://rss.nytimes.com/services/xml/rss/nyt/US.xml",
+    "sports":"http://rss2json.com/api.json?rss_url=http://rss.nytimes.com/services/xml/rss/nyt/Sports.xml",
+    "technology":"http://rss2json.com/api.json?rss_url=http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+    "science":"http://rss2json.com/api.json?rss_url=http://rss.nytimes.com/services/xml/rss/nyt/Science.xml"
+}
 
-function getNews(cb) {
-    http.request({ url: URL, method: "GET" }).then(function(response) {
-        cb(response.content.toJSON());
-    }, hanldeError);    
+function getNews(name, handleSuccess,handleFailure) {
+    http.request({ url: URLS[name], method: "GET" }).then(function(response) {
+        handleSuccess(name, response.content.toJSON());
+    }, (handleFailure || hanldeError));    
 }
 
 
